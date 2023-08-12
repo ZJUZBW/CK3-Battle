@@ -1,23 +1,106 @@
-# CK3军队全解析
+# CK3战斗全解析
 
 ## 前言
 
-## 名词解释
+十字军之王3（CK3）的战斗机制以及究竟什么样的兵士才厉害
 
-- ![img](https://ck3.paradoxwikis.com/images/thumb/3/36/Unit_stat_damage.png/24px-Unit_stat_damage.png) 伤害：每点在战斗阶段造成0.03伤害
-- ![img](https://ck3.paradoxwikis.com/images/thumb/2/27/Unit_stat_toughness.png/24px-Unit_stat_toughness.png) 坚韧：减少伤害导致的损失（包括溃逃和战死)。每点允许在失去所有军力前承受1伤害。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/f/f7/Unit_stat_pursuit.png/24px-Unit_stat_pursuit.png) 追击：每点在撤退阶段造成0.17伤害。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c2/Unit_stat_screen.png/24px-Unit_stat_screen.png) 掩护：每点在撤退阶段承受0.33伤害。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c3/Icon_soldier.png/24px-Icon_soldier.png) 军力（Strength)：表示部队中有多少士兵。重骑兵有50名士兵、大象骑兵有25名士兵、攻城武器有10名士兵、其他武装人员有100名士兵。征召兵的军力是他们的总人数。兵士可以增加他们的规模，费用与招募他们的费用相同。
-- 兵士军团的最大数量：决定最多建立几个兵士军团。头衔等级（伯爵+2、公爵+3、王国+4、帝国+5）、革新（校阅场+1、家兵+1、兵士+1、常备军+1）、宗族传承（5级军事传承+1）
-- 兵士军团的规模上限：决定每个兵士军团可以维持的最大规模。
+#### 致谢：[Wethospu](https://forum.paradoxplaza.com/forum/members/wethospu.1434170/)
+
+## 战斗顺序
+
+每场战斗分为四个阶段：调动阶段、战斗阶段前期、战斗阶段后期和撤退阶段。
+
+- [![Maneuver phase.png](https://ck3.parawikis.com/images_ck3wiki/e/e2/Maneuver_phase.png)](https://ck3.parawikis.com/wiki/File:Maneuver_phase.png) **调动阶段**：机动阶段发生在战斗开始时，持续三天，在此期间**双方均不造成伤亡**。指挥官会投掷出最初的优势骰。
+- [![Early battle phase.png](https://ck3.parawikis.com/images_ck3wiki/6/6e/Early_battle_phase.png)](https://ck3.parawikis.com/wiki/File:Early_battle_phase.png) **战斗阶段前期**：战斗阶段前期持续12天。这个阶段不能主动撤退，如果一支军队在战斗阶段前期被击败，这支军队将被全歼。两个战斗阶段中的大多数伤亡都被视为溃逃（基础战死比例为30%），并将在撤退阶段返回军队。
+- [![Late battle phase.png](https://ck3.parawikis.com/images_ck3wiki/e/e6/Late_battle_phase.png)](https://ck3.parawikis.com/wiki/File:Late_battle_phase.png) **战斗阶段后期**：战斗的第15天开始进入战斗阶段后期，**持续到一支军队军力归零或决定撤退为止**。在战斗后期阶段结束之前的任何时刻，你都可以通过右键单击目的地**来命令你的部队撤退**。这样做会立即开始撤退阶段，你的对手将成为追击者，在必输的战斗中主动撤退可减少伤亡。战斗阶段前期和后期，除了是否能主动撤退以及战败的严厉惩罚以外，没有其他区别。
+- [![Aftermath phase.png](https://ck3.parawikis.com/images_ck3wiki/8/88/Aftermath_phase.png)](https://ck3.parawikis.com/wiki/File:Aftermath_phase.png) **追击阶段**：撤退阶段持续3天，获胜的军队试图追杀另一方的「溃逃士兵」，让其成为「战死士兵」。获胜的军队将对溃逃的军队持续造成伤害，并且不会受到任何伤害，在此阶段的伤亡被视为战死。当阶段结束时，被击败的军队将随同所有幸存的「溃逃士兵」转移到相邻的男爵领中，军队将会溃逃过几个男爵领后，才能再次接受命令，溃逃时部队移动速度将比受控军队快一些。
+
+## 军队
+
+军队一般由四个部分构成：征召兵、骑士、兵士、将领。
+
+### 名词解释
+
+- ![img](https://ck3.paradoxwikis.com/images/thumb/3/36/Unit_stat_damage.png/24px-Unit_stat_damage.png) **伤害**：每点在战斗阶段造成0.03伤害，每天结算一次。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/2/27/Unit_stat_toughness.png/24px-Unit_stat_toughness.png) **坚韧**：减少伤害导致的损失（包括溃逃和战死)。每点允许在失去所有军力前承受1伤害。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/f/f7/Unit_stat_pursuit.png/24px-Unit_stat_pursuit.png) **追击**：每点在撤退阶段造成0.17伤害。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c2/Unit_stat_screen.png/24px-Unit_stat_screen.png) **掩护**：每点在撤退阶段承受0.33伤害。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c3/Icon_soldier.png/24px-Icon_soldier.png) **军力**（Strength)：表示部队中有多少士兵。重骑兵每个规模有50名士兵、象骑兵每个规模有25名士兵、攻城武器每个规模有10名士兵、其他兵士每个规模有100名士兵。征召兵的军力是他们的总人数。兵士可以增加他们的规模，增加规模的费用与招募他们的费用相同。
+- 兵士军团的**最大数量**：决定最多建立几个兵士军团。头衔等级（伯爵+2、公爵+3、王国+4、帝国+5）、革新（校阅场+1、家兵+1、兵士+1、常备军+1）、宗族传承（5级军事传承+1）
+- 兵士军团的**规模上限**：决定每个兵士军团可以维持的最大规模。
+
+### 征召兵
+
+征召兵可以理解为在战争时候强制征召的民兵，来源是每个男爵领地产，玩家通过直辖领地获得，或者从封臣间接获取 ；征召兵没有良好装备，在战斗中往往充当炮灰的作用。在未集结的时候没有维护费，但是征召兵补员速度很慢。
+
+因为派系阈值会无视军队质量，只根据军队上限来计算，所以征召兵还有压制派系的作用。
+
+| 兵种   | 招募费 | 未集结的维护费 | 集结后的维护费            | 伤害 | 坚韧 | 追击 | 掩护 |
+| ------ | ------ | -------------- | ------------------------- | ---- | ---- | ---- | ---- |
+| 征召兵 | 0      | 0              | 0.33（每月每100人，下同） | 10   | 10   | 0    | 0    |
+
+### 骑士
+
+骑士可以理解为全副武装的武将，不同文化对骑士有不同的称呼。骑士在战场中所向披靡，由于伤害分配机制，骑士在大规模战斗中受到的伤害非常少，因此全程都可以提供非常稳定的输出。
+
+**注意**：骑士在坚韧降低到0的时候会视为溃逃，不会战死；骑士只有在骑士之间的战场事件以及战败后有概率受伤、被俘和死亡。
+
+- 如果一支军队输掉了一场战斗，每位骑士有10%概率被俘虏和囚禁，5%概率被杀死。如果军队在战斗阶段前期被击败，对应的概率将提升至55.3%和27.6%
+
+| 兵种 | 招募费 | 未集结的维护费 | 集结后的维护费 | 伤害     | 坚韧    | 追击 | 掩护 |
+| ---- | ------ | -------------- | -------------- | -------- | ------- | ---- | ---- |
+| 骑士 | 0      | 0              | 0              | 100×勇武 | 10×勇武 | 0    | 0    |
+
+### 兵士
+
+兵士（Men-at-Arm），简称MaA，英文直译为武装士兵。可以理解为接受俸禄、装备良好且定期操练的职业部队。每种类型的兵士都克制至少一种其他类型的兵士，若军团被克制，其伤害下降，伤害同军团**规模**之差成比例。兵士军团每月以其最大规模的10%进行补员。
+
+由于兵士可以通过驻扎获得建筑加成，所以兵士后期将作为战斗的主力部队。
+
+### 将领
+
+每支军队可以有一位将领——一位指挥这支军队的角色，能使用其 ![img](https://ck3.parawikis.com/images_ck3wiki/thumb/9/9a/Martial.png/24px-Martial.png) 军事能力来提高军队的 ![img](https://ck3.parawikis.com/images_ck3wiki/thumb/b/b9/Icon_battle_advantage.png/24px-Icon_battle_advantage.png) 优势，将领不能同时作为骑士参与战斗。有许多可以获得的[将领特质](https://ck3.parawikis.com/wiki/特质#将领特质)，这些特质能够对战斗产生直接效果，或者给予战斗外的将领增益。
+
+战斗失败时将领有可能被俘虏，基础几率为10%，代表了游戏文件里的初始“分数”：逃跑是90，被俘是10。这两个分数会受到多种因素的影响，不能直接看作百分率，因为这两个分数之和并不一定是100。以下是影响这两个分数的因素：
+
+| 因素                                                         | 效果                                                         |
+| :----------------------------------------------------------- | :----------------------------------------------------------- |
+| 将领拥有领主的强牵制（玩家）                                 | **+100逃跑分数**                                             |
+| 将领拥有领主的强牵制（AI）                                   | **+30逃跑分数**                                              |
+| ![img](https://ck3.parawikis.com/images_ck3wiki/thumb/a/a7/War.png/24px-War.png) 勇武 | **最终被俘分数乘 ［(30 - 勇武) ÷ 30］，最低乘0.1。**例如，10勇武的角色的最终被俘分数是原来的60% |
+| 拥有特质 ![img](https://ck3.parawikis.com/images_ck3wiki/thumb/0/04/Trait_craven.png/24px-Trait_craven.png) 怯懦 | **被俘分数 ÷ 2**                                             |
+| 军队被歼灭                                                   | **逃跑分数 ÷ 5**                                             |
+| 拥有特质 ![img](https://ck3.parawikis.com/images_ck3wiki/thumb/c/c8/Trait_brave.png/24px-Trait_brave.png) 勇敢 | **被俘分数 \* 2**                                            |
+| 拥有特质 ![img](https://ck3.parawikis.com/images_ck3wiki/thumb/f/ff/Trait_one_legged.png/24px-Trait_one_legged.png) 独腿或 ![img](https://ck3.parawikis.com/images_ck3wiki/thumb/9/92/Trait_maimed.png/24px-Trait_maimed.png) 残废 | **被俘分数 \* 3**                                            |
+
+## 优势
+
+当战斗开始时，双方都会计算出一个贯穿整个战斗并且增加双方所有部队伤害的修正值。优势可以来自特质，地形，建筑或将领的军事能力。每位将领还将每3天进行一次掷骰以增加其优势，并且掷骰会受到各种修正和特质的影响。
+
+每一点**优势差距**使军队的伤害提高 **+2%**【注：优势不影响撤退阶段】 ，初始优势可能受以下因素影响：
+
+- 基础加成
+  - 如果正在防御跨越海峡的敌军，则 **+30**。
+  - 如果正在防御跨过主要河流的敌军，则 **+20**。
+  - 如果正在防御跨河的敌军，则 **+10**。
+  - 如果领主正在率领这支军队，则 **+5**。
+  - 如果领地负债，则 **-10**。
+  - 如果军队还在集结，则 **-10**。
+  - 如果军队补给不足，则 **-10**。
+  - 如果军队补给耗尽，则 **-25**。
+  - 如果军队登陆作战，则 **-30**。
+- 地形和建筑加成
+- 指挥官军事值、特质和修正的加成
+- 宝物加成（领主和指挥官）
 
 ## 战场宽度
 
-等于双方第一时间投入战场的军队数量之和除以2，然后乘战场宽度系数α。可以写成（X+Y）/2×α。
+在战斗的调动阶段决定整场战斗的战场宽度，战场宽度等于双方军力总和除以2，然后乘战场宽度系数。
+
+如果两方的军力分别为X和Y，且战场宽度系数为α，则战场宽度S =（X+Y）/2×α。
 
 ## 兵士战斗力推导
 
-## 兵士战斗力叠加机制
+因为战场宽度
 
-## 兵士
+## 兵士战斗力叠加机制
