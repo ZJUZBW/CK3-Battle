@@ -4,34 +4,38 @@
 
 十字军之王3（CK3）的战斗机制以及究竟什么样的兵士才厉害
 
-#### 致谢：[Wethospu](https://forum.paradoxplaza.com/forum/members/wethospu.1434170/)
+#### 致谢：[Wethospu（P社论坛）](https://forum.paradoxplaza.com/forum/members/wethospu.1434170/)、[贵妃娘娘（哔哩哔哩）](https://space.bilibili.com/1381288/article)、[CK3的维基百科](https://ck3.parawikis.com/wiki/%E9%A6%96%E9%A1%B5)
 
 ## 战斗顺序
 
-每场战斗分为四个阶段：调动阶段、战斗阶段前期、战斗阶段后期和追击阶段。
+**每场战斗分为四个阶段：调动阶段、战斗阶段前期、战斗阶段后期和追击阶段**。
 
 - [![Maneuver phase.png](https://ck3.parawikis.com/images_ck3wiki/e/e2/Maneuver_phase.png)](https://ck3.parawikis.com/wiki/File:Maneuver_phase.png) **调动阶段**：机动阶段发生在战斗开始时，持续三天，在此期间**双方均不造成伤亡**。指挥官会投掷出最初的优势骰。
 - [![Early battle phase.png](https://ck3.parawikis.com/images_ck3wiki/6/6e/Early_battle_phase.png)](https://ck3.parawikis.com/wiki/File:Early_battle_phase.png) **战斗阶段前期**：战斗阶段前期持续12天。这个阶段不能主动撤退，如果一支军队在战斗阶段前期被击败，这支军队将被全歼。两个战斗阶段中的大多数伤亡都被视为溃逃（基础战死比例为30%），并将在追击阶段返回军队。
 - [![Late battle phase.png](https://ck3.parawikis.com/images_ck3wiki/e/e6/Late_battle_phase.png)](https://ck3.parawikis.com/wiki/File:Late_battle_phase.png) **战斗阶段后期**：战斗的第15天开始进入战斗阶段后期，**持续到一支军队军力归零或决定撤退为止**。在战斗后期阶段结束之前的任何时刻，你都可以通过右键单击目的地**来命令你的部队撤退**。这样做会立即开始追击阶段，你的对手将成为追击者，在必输的战斗中主动撤退可减少伤亡。战斗阶段前期和后期，除了是否能主动撤退以及战败的严厉惩罚以外，没有其他区别。
-- [![Aftermath phase.png](https://ck3.parawikis.com/images_ck3wiki/8/88/Aftermath_phase.png)](https://ck3.parawikis.com/wiki/File:Aftermath_phase.png) **追击阶段**：追击阶段持续3天，获胜的军队试图追杀另一方的「溃逃士兵」，让其成为「战死士兵」。获胜的军队将对溃逃的军队持续造成伤害，并且不会受到任何伤害，在此阶段的伤亡被视为战死。当阶段结束时，被击败的军队将随同所有幸存的「溃逃士兵」转移到相邻的男爵领中，军队将会溃逃过几个男爵领后，才能再次接受命令，溃逃时部队移动速度将比受控军队快一些。
+- [![Aftermath phase.png](https://ck3.parawikis.com/images_ck3wiki/8/88/Aftermath_phase.png)](https://ck3.parawikis.com/wiki/File:Aftermath_phase.png) **追击阶段**：追击阶段持续3天，获胜的军队试图追杀另一方的「溃逃士兵」，让其成为「战死士兵」。
+  - 获胜的军队将对溃逃的军队持续造成伤害，并且不会受到任何伤害，在此阶段的伤亡被视为战死。
+  - **追击阶段时，军队的伤害属性不再生效，取而代之的是追击属性**。战败的军队在撤退过程中会承受5%剩余总军力的损失（平均分布在3天）。
+  - 当阶段结束时，被击败的军队将随同所有幸存的「溃逃士兵」转移到相邻的男爵领中，军队将会溃逃过几个男爵领后，才能再次接受命令，溃逃时部队移动速度将比受控军队快一些。
+
 
 ## 军队
 
 军队一般由四个部分构成：征召兵、骑士、兵士、将领。
 
-### 名词解释
+### 军队的属性构成
 
 - ![img](https://ck3.paradoxwikis.com/images/thumb/c/c3/Icon_soldier.png/24px-Icon_soldier.png) **军力**（Strength)：表示部队中有多少士兵。重骑兵每个规模有50名士兵、象骑兵每个规模有25名士兵、攻城武器每个规模有10名士兵（攻城武器不参与战斗)、其他兵士每个规模有100名士兵。征召兵的军力是他们的总人数，每个骑士的军力为1。
   - 军队的总伤害等于 ∑（军力×士兵伤害）。当部队撤退或死亡时，就不再参与战斗，因此该部队自然会造成更少的伤害。
   - 即使是骑士，在受到伤害后造成的伤害也会减少。例如，军力为 0.97 的骑士造成的伤害会减少 3%。
   - 军力会影响敌人将伤害传递给该单位的比例。如果你有 1 名骑士和 99 名征召兵，那么骑士将承受 1% 的伤害，征召兵将承受 99% 的伤害。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/3/36/Unit_stat_damage.png/24px-Unit_stat_damage.png) **伤害**（Damage)：每点在战斗阶段造成0.03伤害，每天结算一次。例如，征召兵有 10 伤害，因此 100 名征召兵会造成 100 * 10 * 0.03 = 30 伤害，杀死 3 名敌方征兵。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/2/27/Unit_stat_toughness.png/24px-Unit_stat_toughness.png) **坚韧**（Toughness)：减少伤害导致的损失（包括溃逃和战死)，每点允许在失去所有军力前承受1伤害。当一个单位受到伤害时，坚韧会影响军力损失的程度。如果征召兵受到 100 点伤害，则意味着损失 10 点军力。散兵只会损失 100 / 16 = 6.25 军力（并不会四舍五入)。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/f/f7/Unit_stat_pursuit.png/24px-Unit_stat_pursuit.png) **追击**（Pursuit)：每点在追击阶段造成0.17伤害。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c2/Unit_stat_screen.png/24px-Unit_stat_screen.png) **掩护**（Screen)：每点在追击阶段承受0.33伤害。
 
-- ![img](https://ck3.paradoxwikis.com/images/thumb/3/36/Unit_stat_damage.png/24px-Unit_stat_damage.png) **伤害**：每点在战斗阶段造成0.03伤害，每天结算一次。例如，征召兵有 10 伤害，因此 100 名征召兵会造成 100 * 10 * 0.03 = 30 伤害，杀死 3 名敌方征兵。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/2/27/Unit_stat_toughness.png/24px-Unit_stat_toughness.png) **坚韧**：减少伤害导致的损失（包括溃逃和战死)，每点允许在失去所有军力前承受1伤害。当一个单位受到伤害时，坚韧会影响军力损失的程度。如果征召兵受到 100 点伤害，则意味着损失 10 点军力。散兵只会损失 100 / 16 = 6.25 军力（并不会四舍五入)。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/f/f7/Unit_stat_pursuit.png/24px-Unit_stat_pursuit.png) **追击**：每点在追击阶段造成0.17伤害。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c2/Unit_stat_screen.png/24px-Unit_stat_screen.png) **掩护**：每点在追击阶段承受0.33伤害。
 - 兵士军团的**最大数量**：决定最多建立几个兵士军团。头衔等级（伯爵+2、公爵+3、王国+4、帝国+5）、革新（校阅场+1、家兵+1、兵士+1、常备军+1）、宗族传承（5级军事传承+1）
-- 兵士军团的**规模上限**：兵士可以增加他们的规模，增加规模的费用与招募他们的费用相同。规模上限决定每个兵士军团可以维持的最大规模。
+- 兵士军团的**规模上限**：兵士军团可以增加规模，增加规模的费用与招募他们的费用相同。规模上限决定每个兵士军团可以维持的最大规模。
 
 ### 征召兵
 
@@ -76,7 +80,7 @@
 
 #### 兵种克制
 
-- 1规模的兵士产生45%×**基础克制系数**×克制效率的克制因子，这个克制因子将会均匀分配给全部被克制的单位，被克制的兵士将会降低等量的伤害（独立乘算）。克制最多只能降低90%的伤害。
+- 1规模的兵士产生克制因子，45%×**基础克制系数**×克制效率的，这个克制因子将会均匀分配给全部被克制的单位，被克制的兵士将会降低等量的伤害（独立乘算）。克制最多只能降低90%的伤害。
 - 兵士收到伤害以后，产生的克制因子会降低，修正后的克制因子的数值 = 原克制因子×当前军力/原军力。
 - **举例说明**
   - 比如1规模长枪兵产生45%的克制，如果遇到1规模的重骑兵，则该重骑兵造成的伤害变为原来的1 - 45% = 55%；
@@ -147,14 +151,52 @@
 | [![Terrain plains.png](https://ck3.parawikis.com/images_ck3wiki/c/cc/Terrain_plains.png)](https://ck3.parawikis.com/wiki/File:Terrain_plains.png) 平原 | 100%     | 100%                                                         | —                                                            | —                                     |
 | [![Terrain steppe.png](https://ck3.parawikis.com/images_ck3wiki/b/b8/Terrain_steppe.png)](https://ck3.parawikis.com/wiki/File:Terrain_steppe.png) 草原 | 100%     | 100%                                                         | —                                                            | —                                     |
 
-## 战斗阶段的详细计算
-
-- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c3/Icon_soldier.png/24px-Icon_soldier.png) **军力**（Strength)：表示部队中有多少士兵。重骑兵每个规模有50名士兵、象骑兵每个规模有25名士兵、攻城武器每个规模有10名士兵、其他兵士每个规模有100名士兵。征召兵的军力是他们的总人数
-- ![img](https://ck3.paradoxwikis.com/images/thumb/3/36/Unit_stat_damage.png/24px-Unit_stat_damage.png) **伤害**：每点在战斗阶段造成0.03伤害，每天结算一次。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/2/27/Unit_stat_toughness.png/24px-Unit_stat_toughness.png) **坚韧**：减少伤害导致的损失（包括溃逃和战死)。每点允许在失去所有军力前承受1伤害。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/f/f7/Unit_stat_pursuit.png/24px-Unit_stat_pursuit.png) **追击**：每点在追击阶段造成0.17伤害。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/c/c2/Unit_stat_screen.png/24px-Unit_stat_screen.png) **掩护**：每点在追击阶段承受0.33伤害。
-
 ## 战斗力公式推导
 
-## 兵士战斗力叠加机制
+在定义战斗力的时候，首先要确定几个规则。
+
+- 不考虑其他限制和加成的情况下，两军相战，战斗力高的必然获胜；这样战斗力才有比大小的意义。
+- 为了方便计算，相同属性的部队，部队A和部队B合并以后的战斗力 = 部队A的战斗力+部队B的战斗力。
+
+### 单一兵种
+
+**假设红方（均由兵种A构成）与蓝方（均由兵种B构成）交战，那么根据游戏里的机制，不考虑其他差异的话，如何预测输赢**？
+
+- 假设兵种A的伤害为D~A~，坚韧为T~A~，在时刻为t时的军力为S~A~（t），初始军力为S~A~（0）。
+- 同理，兵种B的伤害为D~B~，坚韧为T~B~，在时刻为t时的军力为S~B~（t），初始军力为S~B~（0）。
+
+$$
+{\mbox{兵种A的军力损失函数   }}\frac {dS_A(t)} {dt} =-\frac {0.03*D_B} {T_A}*S_B(t)
+$$
+
+$$
+{\mbox{兵种B的军力损失函数   }}\frac {dS_B(t)} {dt} =-\frac {0.03*D_A} {T_B}*S_A(t)
+$$
+
+（1）式除以（2）式，得
+$$
+\frac {dS_A(t)} {dS_B(t)}=\frac {D_B*T_B*S_B(t)} {D_A*T_A*S_A(t)}
+$$
+**根据上述微分方程（3），可以得出以下状态方程（4）**
+$$
+(S_A(0)^2-S_A(t)^2)*D_A*T_A = (S_B(0)^2-S_B(t)^2)*D_B*T_B
+$$
+其实这个方程跟**兰彻斯特作战模型里的平方律**相似，这个方程有简单的结论
+
+- 交战一方的有效战斗力，正比于其军力的平方（S^2^）与每一战斗单位作战性能（D*T）的乘积，称其为**平方律**。
+- 按照这一定律，如果蓝方的作战性能为红方的4倍，则红方在数量上集中2倍于蓝方的兵力就可抵消蓝方作战性能的优势。
+- **兰彻斯特采用下述例子说明平方律符合集中优势兵力的作战原则**：“如果蓝方1000人与红 方1000人交战，双方单个战斗单位的平均战斗力相同，红方被蓝方分割成各500人的两半。假定蓝方以1000人先攻击红方的500人，则蓝方将以损失134人的代价全歼红方的一半，接着蓝方以剩下的866人再全歼红方的另一半，蓝方在这两次战斗中总共损失293人。”
+
+
+
+```latex
+$$
+y = x^2
+$$
+```
+
+
+
+### 混合兵种
+
+## 兵士属性叠加机制
