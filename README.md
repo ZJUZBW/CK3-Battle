@@ -164,26 +164,19 @@
 
 - 假设兵种A的伤害为D<sub>A</sub>，坚韧为T<sub>A</sub>，在时刻为t时的军力为S<sub>A</sub>（t），初始军力为S<sub>A</sub>（0）。
 - 同理，兵种B的伤害为D<sub>B</sub>，坚韧为T<sub>B</sub>，在时刻为t时的军力为S<sub>B</sub>（t），初始军力为S<sub>B</sub>（0）。
+- 则兵种A的损失函数以及兵种B的损失函数如下：
 
-$$
-{\mbox{兵种A的军力损失函数(1) }}\frac {dS_A(t)} {dt} =-\frac {0.03*D_B} {T_A}*S_B(t)
-$$
+![](http://latex.codecogs.com/gif.latex?\\{\mbox{(1) }}\frac {dS_A(t)} {dt} =-\frac {0.03*D_B} {T_A}*S_B(t))
 
-$$
-{\mbox{兵种B的军力损失函数(2) }}\frac {dS_B(t)} {dt} =-\frac {0.03*D_A} {T_B}*S_A(t)
-$$
+![](http://latex.codecogs.com/gif.latex?\\{\mbox{(2) }}\frac {dS_B(t)} {dt} =-\frac {0.03*D_A} {T_B}*S_A(t))
 
 （1）式除以（2）式，得
 
-$$
-{\mbox{(3) }}\frac {dS_A(t)} {dS_B(t)}=\frac {D_B*T_B*S_B(t)} {D_A*T_A*S_A(t)}
-$$
+![](http://latex.codecogs.com/gif.latex?\\{\mbox{(3) }}\frac {dS_A(t)} {dS_B(t)}=\frac {D_B*T_B*S_B(t)} {D_A*T_A*S_A(t)})
 
 根据上述微分方程（3），可以得出以下状态方程（4）
 
-$$
-{\mbox{(4) }}(S_A(0)^2-S_A(t)^2)*D_A*T_A = (S_B(0)^2-S_B(t)^2)*D_B*T_B
-$$
+![](http://latex.codecogs.com/gif.latex?\\{\mbox{(4) }}D_A*T_A*[S_A(0)^2-S_A(t)^2]=D_B*T_B*[S_B(0)^2-S_B(t)^2])
 
 其实这个方程跟**兰彻斯特作战模型里的平方律**相似，这个方程有简单的结论
 
