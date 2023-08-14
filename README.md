@@ -186,8 +186,10 @@
 
 ![](https://latex.codecogs.com/svg.image?\lim_{x\to0}f(x)=8)
 
-```latex
-
+```ini
+$$
+y = x^2
+$$
 ```
 
 
