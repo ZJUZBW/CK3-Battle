@@ -170,17 +170,13 @@
 
 <img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(2) }}\frac {dS_B(t)} {dt} =-\frac {0.03*D_A} {T_B}*S_A(t)">
 
-![](https://latex.codecogs.com/svg.image?\\{\mbox{(1) }}\frac {dS_A(t)} {dt} =-\frac {0.03*D_B} {T_A}*S_B(t))
-
-![](http://latex.codecogs.com/gif.latex?\\{\mbox{(2) }}\frac {dS_B(t)} {dt} =-\frac {0.03*D_A} {T_B}*S_A(t))
-
 （1）式除以（2）式，得
 
-![](http://latex.codecogs.com/gif.latex?\\{\mbox{(3) }}\frac {dS_A(t)} {dS_B(t)}=\frac {D_B*T_B*S_B(t)} {D_A*T_A*S_A(t)})
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(3) }}\frac {dS_A(t)} {dS_B(t)}=\frac {D_B*T_B*S_B(t)} {D_A*T_A*S_A(t)})">
 
 根据上述微分方程（3），可以得出以下状态方程（4）
 
-![](http://latex.codecogs.com/gif.latex?\\{\mbox{(4) }}D_A*T_A*[S_A(0)^2-S_A(t)^2]=D_B*T_B*[S_B(0)^2-S_B(t)^2])
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(4) }}(S_A(0)^2-S_A(t)^2)*D_A*T_A=(S_B(0)^2-S_B(t)^2)*D_B*T_B">
 
 其实这个方程跟**兰彻斯特作战模型里的平方律**相似，这个方程有简单的结论
 
