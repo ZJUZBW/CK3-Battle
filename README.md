@@ -166,7 +166,7 @@
 - 同理，兵种B的伤害为D<sub>B</sub>，坚韧为T<sub>B</sub>，在时刻为t时的军力为S<sub>B</sub>（t），初始军力为S<sub>B</sub>（0）。
 - 则兵种A的损失函数以及兵种B的损失函数如下：
 
-![](http://latex.codecogs.com/svg.image?\\{\mbox{(1) }}\frac {dS_A(t)} {dt} =-\frac {0.03*D_B} {T_A}*S_B(t))
+![](https://latex.codecogs.com/svg.image?\\{\mbox{(1) }}\frac {dS_A(t)} {dt} =-\frac {0.03*D_B} {T_A}*S_B(t))
 
 ![](http://latex.codecogs.com/gif.latex?\\{\mbox{(2) }}\frac {dS_B(t)} {dt} =-\frac {0.03*D_A} {T_B}*S_A(t))
 
