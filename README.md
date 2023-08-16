@@ -208,12 +208,38 @@
 
 #### 图像解释
 
-由此定义可知，有效战斗力C也等于函数图像S（i）与X和Y轴相交所构成图像的面积。
+由此定义可知，有效战斗力C也等于函数图像S（i）与X和Y轴相 交所构成图像的面积。
 
 
 
 ### 混合兵种
 
+先考虑两种不同兵种A、和兵种B混合以后的有效战斗力。
 
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(9) }}dS_A(i)  =-\frac {di} {T_A}*\frac {S_A(i)} {S_A(i)+S_B(i)}">
+
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(10) }}dS_B(i)  =-\frac {di} {T_B}*\frac {S_B(i)} {S_B(i)+S_A(i)}">
+
+（9）式和（10）式，可以得出以下微分方程（11）
+
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(11) }}\frac {dS_A(i)} {dS_B(i)}  =\frac {S_A(i)*\frac {1} {T_A}} {S_B(i)*\frac {1} {T_B}}">
+
+求解得（12）
+
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(12) }}\left(\frac{S_A(i)} {S_{A0}}\right)^{T_A}  =\left(\frac{S_B(i)} {S_{B0}}\right)^{T_B}">
+
+由定义可知，有效战斗力为（13）
+
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(13) }}C_{A+B}=\int_0^{S_AT_A+S_BT_B} \left(D_A*S_A(i)+D_B*S_B(i)\right)di">
+
+
+
+将（11）和（12）代入（13）得（14）
+
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(14) }}C_{A+B}=\frac {1} {2}D_AT_AS_{A0}^2+\frac {1} {2}D_BT_BS_{B0}^2+\frac {T_B} {T_A+T_B}D_AT_AS_{A0}S_{B0}+\frac {T_A} {T_A+T_B}D_BT_BS_{A0}S_{B0}">
+
+化简得到
+
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(14) }}C_{A+B}=\frac {1} {2}(\sqrt{E_A}S_{A0}+\sqrt{E_B}S_{B0})^2+\frac {T_B} {T_A+T_B}E_AS_{A0}S_{B0}+\frac {T_A} {T_A+T_B}E_BS_{A0}S_{B0}-\sqrt{E_AE_B}S_{A0}S_{B0}">
 
 ## 兵士属性叠加机制
