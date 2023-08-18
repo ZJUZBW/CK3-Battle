@@ -160,6 +160,8 @@
 
 ### 单一兵种
 
+#### 战斗力大小如何预测战斗的输赢
+
 **假设红方（均由兵种A构成）与蓝方（均由兵种B构成）交战，那么根据游戏里的机制，不考虑其他差异的话，如何预测输赢**？
 
 - 假设兵种A的伤害为D<sub>A</sub>，坚韧为T<sub>A</sub>，在交战第t轮时的军力为S<sub>A</sub>（t），初始军力S<sub>A</sub>（0）= S<sub>A0</sub>。
@@ -240,6 +242,8 @@
 
 化简得到
 
-<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(14) }}C_{A+B}=\frac {1} {2}(\sqrt{E_A}S_{A0}+\sqrt{E_B}S_{B0})^2+\frac {T_B} {T_A+T_B}E_AS_{A0}S_{B0}+\frac {T_A} {T_A+T_B}E_BS_{A0}S_{B0}-\sqrt{E_AE_B}S_{A0}S_{B0}">
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(15) }}C_{A+B}=\frac {1} {2}(\sqrt{E_A}S_{A0}+\sqrt{E_B}S_{B0})^2+\frac {T_B} {T_A+T_B}E_AS_{A0}S_{B0}+\frac {T_A} {T_A+T_B}E_BS_{A0}S_{B0}-\sqrt{E_AE_B}S_{A0}S_{B0}">
+
+从（15）式可以看出，当兵种A与兵种B的装备性能相等时（即$E_A=E_B$时），混合以后的有效战斗力C<sub>A+B</sub>=
 
 ## 兵士属性叠加机制
