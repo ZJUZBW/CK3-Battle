@@ -466,15 +466,15 @@ $$\alpha=\frac{1}{1+\frac{e_{a/b}}{k_{a/b}}}\cdot e_{a/b}+\frac{1}{1+\frac{k_{a/
 
 在实际兵士的搭配中，限制条件是兵士的规模总量有限。比如象兵（250伤害、50坚韧、每规模25人）和瓦兰吉（45伤害、30坚韧、每规模100人）混合时，多1规模象兵就会少1规模的瓦兰吉。尽管象兵和瓦兰吉的混合系数α＞0，但是c的大小也会发生变化。这样的限制条件下，混合以后究竟会增加战斗力还是减少呢？
 
-这里我们将S拆分为n和s，n为部队规模，s为每规模的军力。N=N<sub>A</sub>+N<sub>B</sub>，且N为常数。
+这里我们将c变成为N和c，N为部队规模，c为每规模部队的标准战斗力。N=N<sub>A</sub>+N<sub>B</sub>，且N为常数。
 
 （18）式可以变成如下式子。
 
-<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(20) }}C_{A+B}=\frac{1}{2}\left(e_As_{A}N+(e_Bs_{B}-e_As_{A})N_B\right)^2+\alpha\times e_{B}s_{B}e_{A}s_{A}N_B(N-N_B)">
+<img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(20) }}C_{A+B}=\frac{1}{2}\left(c_AN+(c_B-c_A)N_B\right)^2+\alpha *c_{A}c_{B}N_B(N-N_B)">
 
 C<sub>A+B</sub>为N<sub>B</sub>的二次函数，当其导数为零时，会取得极值。（20）式求导，让导数等于0。
 
-设$K_{A/B}=\frac{e_As_A}{e_Bs_B}$，得到如下函数（21），当N<sub>B</sub>/N满足以下方程时，混合以后有效战斗力最大。
+设$K_{A/B}=\frac{c_A}{c_B}$，得到如下函数（21），当N<sub>B</sub>/N满足以下方程时，混合以后有效战斗力最大。
 
 <img src="http://latex.codecogs.com/gif.latex?\\\frac{N_B}{N}=\frac{K_{A/B}-1-\alpha}{K_{A/B}+\frac{1}{K_{A/B}}-2-2\alpha}\rightarrow50%">
 
@@ -486,7 +486,11 @@ C<sub>A+B</sub>为N<sub>B</sub>的二次函数，当其导数为零时，会取�
 
 根据两个兵种混合的有效战斗力公式，可以拓展出任意兵种混合以后的有效战斗力公式如下：
 
-$\C_U=\frac{1}{2}(\sum_{i=1}^nc_i)^2+\sum_{i=1}^n(\sum_{j=i+1}^n\alpha_{ij}c_ic_j)$，$其中U=u_1+u_2+u_3+\cdots+u_n$
+<img src="http://latex.codecogs.com/gif.latex?\\C_U=\frac{1}{2}(\sum_{i=1}^nc_i)^2+\sum_{i=1}^n(\sum_{j=i+1}^n\alpha_{ij}c_ic_j)">
+
+$C_U=\frac{1}{2}(\sum_{i=1}^nc_i)^2+\sum_{i=1}^n(\sum_{j=i+1}^n\alpha_{ij}c_ic_j)$，
+
+$U=u_1+u_2+u_3+\cdots+u_n$
 
 公式的左边部分为均质化战斗力（即面板战斗力），$\underline{C_U}=\frac{1}{2}(\sum_{i=1}^nc_i)^2$
 
