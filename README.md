@@ -34,10 +34,10 @@
 ### 部队的属性构成
 
 - ![img](https://ck3.paradoxwikis.com/images/thumb/c/c3/Icon_soldier.png/24px-Icon_soldier.png) **军力**（Strength)：表示部队中有多少士兵。重骑兵每个规模有50名士兵、象骑兵每个规模有25名士兵、攻城武器每个规模有10名士兵（攻城武器不参与战斗)、其他兵士每个规模有100名士兵。征召兵的军力是他们的总人数，每个骑士的军力为1。
-  - 军队的总伤害等于 ∑（军力×士兵伤害）。当部队撤退或死亡时，就不再参与战斗，因此该部队自然会造成更少的伤害。
+  - 军队的总伤害等于每个部队的军力×部队伤害，然后求和。当部队撤退或死亡时，就不再参与战斗，因此该部队自然会造成更少的伤害。
   - 即使是骑士，在受到伤害后造成的伤害也会减少。例如，军力为 0.97 的骑士造成的伤害会减少 3%。
   - 军力会影响敌人将伤害传递给该单位的比例。如果你有 1 名骑士和 99 名征召兵，那么骑士将承受 1% 的伤害，征召兵将承受 99% 的伤害。
-- ![img](https://ck3.paradoxwikis.com/images/thumb/3/36/Unit_stat_damage.png/24px-Unit_stat_damage.png) **伤害**（Damage)：每点在战斗阶段每轮造成0.03伤害，每天结算一次。例如，征召兵有 10 伤害，因此 100 名征召兵会造成 100 * 10 * 0.03 = 30 伤害，杀死 3 名敌方征召兵。
+- ![img](https://ck3.paradoxwikis.com/images/thumb/3/36/Unit_stat_damage.png/24px-Unit_stat_damage.png) **伤害**（Damage)：每点在战斗阶段每轮造成0.03伤害，每天结算一次。例如，征召兵有 10 伤害，因此 100 名征召兵会造成 100 × 10 × 0.03 = 30 伤害，杀死 3 名敌方征召兵。
 - ![img](https://ck3.paradoxwikis.com/images/thumb/2/27/Unit_stat_toughness.png/24px-Unit_stat_toughness.png) **坚韧**（Toughness)：减少伤害导致的损失（包括溃逃和战死)，每点允许在失去所有军力前承受1伤害。当一个单位受到伤害时，坚韧会影响军力损失的程度。如果征召兵受到 100 点伤害，则意味着损失 10 点军力。散兵只会损失 100 / 16 = 6.25 军力【注：实际计算中并不会四舍五入，只是游戏中会取整显示罢了】。
 - ![img](https://ck3.paradoxwikis.com/images/thumb/f/f7/Unit_stat_pursuit.png/24px-Unit_stat_pursuit.png) **追击**（Pursuit)：每点在追击阶段每轮造成0.17伤害。比如弓骑兵有40追击，那么追击阶段【共计3天】总共造成20伤害，不考虑掩护的话可以消灭两个征召兵。
 - ![img](https://ck3.paradoxwikis.com/images/thumb/c/c2/Unit_stat_screen.png/24px-Unit_stat_screen.png) **掩护**（Screen)：每点在追击阶段每轮额外吸收0.33伤害；每轮追击阶段受到的总伤害，先减去由总掩护吸收的部分，然后再将伤害根据军力占比分配给部队。掩护只计算总值，作用于整个军队。
@@ -408,7 +408,11 @@
 
 #### 混合系数
 
-设混合系数$\alpha=\frac{T_{B}}{T_{A}+T_{B}}\cdot\frac{e_{A}}{e_{B}}+\frac{T_{A}}{T_{A}+T_{B}}\cdot\frac{e_{B}}{e_{A}}-1$，我们就得到了混合兵种有效战斗力的简化表达式（18）。
+设混合系数为α
+
+<img src="http://latex.codecogs.com/gif.latex?\\\alpha=\frac{T_{B}}{T_{A}+T_{B}}\cdot\frac{e_{A}}{e_{B}}+\frac{T_{A}}{T_{A}+T_{B}}\cdot\frac{e_{B}}{e_{A}}-1">
+
+我们就得到了混合兵种有效战斗力的简化表达式（18）。
 
 <img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(18) }}C_{A+B}=\frac{1}{2}(c_A+c_B)^{2}+\alpha *c_{A}c_{B}=\frac{1}{2}c_A^2+\frac{1}{2}c_B^2+(\alpha+1)c_Ac_B">
 
