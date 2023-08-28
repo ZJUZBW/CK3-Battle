@@ -403,7 +403,11 @@ $e=\sqrt{E}=\sqrt{DT}$
 
 <img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(16) }}C_{A+B}=\frac {1} {2}(e_AS_{A0}+e_BS_{B0})^2+\frac {T_B} {T_A+T_B}e_A^2S_{A0}S_{B0}+\frac {T_A} {T_A+T_B}e_B^2S_{A0}S_{B0}-e_Ae_BS_{A0}S_{B0}">
 
-单一部队的标准战斗力为c，等于部队的精锐度 e × 部队的军力 S，即$c=eS$，将（16）化简为（17）
+单一部队的标准战斗力为c，等于部队的精锐度 e × 部队的军力 S，表达式如下：
+
+$c=eS$
+
+将（16）化简为（17）
 
 <img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(17) }}C_{A+B}=\frac{1}{2}(c_A+c_B)^{2}+c_{A}c_{B}\left(\frac{T_{B}}{T_{A}+T_{B}}\cdot\frac{e_{A}}{e_{B}}+\frac{T_{A}}{T_{A}+T_{B}}\cdot\frac{e_{B}}{e_{A}}-1\right)">
 
