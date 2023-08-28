@@ -436,7 +436,7 @@ $$\alpha=\frac{1}{1+\frac{e_{a/b}}{k_{a/b}}}\cdot e_{a/b}+\frac{1}{1+\frac{k_{a/
 
 - 当e<sub>A/B</sub>＞1且k<sub>A/B</sub>＞1时，α＞0。
 - 当e<sub>A/B</sub>＜1且k<sub>A/B</sub>＜1时，α＜0。
-- k<sub>A/B</sub>＞1时，e<sub>A/B</sub>越大，α越大，$\lim_{e_{A/B}\rightarrow+\infty}\alpha = k_{A/B}-1$。
+- k<sub>A/B</sub>＞1时，α是关于e<sub>A/B</sub>的单调递增函数,$\lim_{e_{A/B}\rightarrow+\infty}\alpha = k_{A/B}-1$
 - 当k<sub>A/B</sub>=1时，α=0。游戏中，骑士之间勇武不同，但是k相同，所以可以当成同一种部队来看。
 - 当e<sub>A/B</sub>=1时，α=0。也就是说精锐度相同的部队，混合的时候可以当成同一部队。比如，100人（伤害25、坚韧20）的弓箭手，与100人（伤害20、坚韧25）的长枪兵混合，跟只有200人弓箭手或者只有200人长枪兵的战斗力相同。
 
