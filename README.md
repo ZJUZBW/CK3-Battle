@@ -488,7 +488,7 @@ C<sub>A+B</sub>为N<sub>B</sub>的二次函数，当其导数为零时，会取�
 
 <img src="http://latex.codecogs.com/gif.latex?\\C_U=\frac{1}{2}(\sum_{i=1}^nc_i)^2+\sum_{i=1}^n(\sum_{j=i+1}^n\alpha_{ij}c_ic_j)">
 
-其中$U=u_1+u_2+u_3+\cdots+u_n$
+$U=u_1+u_2+u_3+\cdots+u_n$
 
 公式的左边部分为均质化战斗力（即面板战斗力）
 
