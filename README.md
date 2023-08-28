@@ -461,11 +461,9 @@ $\underline{C_{A+B}}=\frac{1}{2}(c_A+c_B)^2$
 
 #### 理想情况下的兵种混合
 
-从（18）式中，可以看出，如果
+从（18）式中，可以看出，混合兵种双方的标准战斗力相等时，混合系数α对有效战斗力的影响最大，数学表达式如下：
 
 $\frac{1}{2}(c_A+c_B)=c_A=c_B$
-
-即混合兵种双方的标准战斗力相等时，混合系数α对有效战斗力的影响最大。
 
 <img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(19) }}C_{A+B}=\frac{1}{2}(1+\frac{\alpha}{2})(c_A+c_B)^{2}\rightarrow\frac{1}{2}(\frac{1}{2}+\frac{k_{A/B}}{2})(c_A+c_B)^{2}">
 
