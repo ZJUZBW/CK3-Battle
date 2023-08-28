@@ -468,7 +468,7 @@ $$\alpha=\frac{1}{1+\frac{e_{a/b}}{k_{a/b}}}\cdot e_{a/b}+\frac{1}{1+\frac{k_{a/
 
 这里我们将c变成为N和c，N为部队规模，c为每规模部队的标准战斗力。N=N<sub>A</sub>+N<sub>B</sub>，且N为常数。
 
-（18）式可以变成如下式子。
+（18）式可以变成（20）。
 
 <img src="http://latex.codecogs.com/gif.latex?\\{\mbox{(20) }}C_{A+B}=\frac{1}{2}\left(c_AN+(c_B-c_A)N_B\right)^2+\alpha *c_{A}c_{B}N_B(N-N_B)">
 
@@ -488,10 +488,10 @@ C<sub>A+B</sub>为N<sub>B</sub>的二次函数，当其导数为零时，会取�
 
 <img src="http://latex.codecogs.com/gif.latex?\\C_U=\frac{1}{2}(\sum_{i=1}^nc_i)^2+\sum_{i=1}^n(\sum_{j=i+1}^n\alpha_{ij}c_ic_j)">
 
-$C_U=\frac{1}{2}(\sum_{i=1}^nc_i)^2+\sum_{i=1}^n(\sum_{j=i+1}^n\alpha_{ij}c_ic_j)$，
+其中$U=u_1+u_2+u_3+\cdots+u_n$
 
-$U=u_1+u_2+u_3+\cdots+u_n$
+公式的左边部分为均质化战斗力（即面板战斗力）
 
-公式的左边部分为均质化战斗力（即面板战斗力），$\underline{C_U}=\frac{1}{2}(\sum_{i=1}^nc_i)^2$
+<img src="http://latex.codecogs.com/gif.latex?\\\underline{C_U}=\frac{1}{2}(\sum_{i=1}^nc_i)^2">
 
 - 在大规模混合士兵的时候，可以只考虑相互之间混合系数大且标准战斗力占比多的兵种之间的相互作用即可；
