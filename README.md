@@ -255,9 +255,7 @@
 
 **建筑**：
 
-https://github.com/ZJUZBW/CK3-Battle/blob/50717c9bed21b1c6d70ca1e0a801770e4bbf41e2/images/%E5%BC%93%E9%AA%91%E5%85%B5%E5%BB%BA%E7%AD%91.png
-
-![](http://github.com/ZJUZBW/CK3-Battle/blob/50717c9bed21b1c6d70ca1e0a801770e4bbf41e2/images/%E5%BC%93%E9%AA%91%E5%85%B5%E5%BB%BA%E7%AD%91.png)
+![弓骑兵建筑](images/弓骑兵建筑.png)
 
 **部落时代（三孔）**
 
