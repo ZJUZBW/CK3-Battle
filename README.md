@@ -102,8 +102,9 @@
   - α为混合系数，跟兵种A和兵种B的精锐度 e 比值，和攻击系数 k 的比值有关，公式如下：
     - $\alpha=\frac{1}{1+\frac{e_{a/b}}{k_{a/b}}}\cdot e_{a/b}+\frac{1}{1+\frac{k_{a/b}}{e_{a/b}}}\cdot\frac{1}{e_{a/b}}-1$
     
-      ![混合系数函数图像](images/混合系数函数图像.jpg)
+      - ![混合系数函数图像](images/混合系数函数图像.jpg)
     
+      
       - $\lim_{e_{A/B}\rightarrow+\infty}\alpha = k_{A/B}-1$
         - 两个兵种之间的攻击系数比值越大，混合系数的极限越高
       - 当k<sub>A/B</sub>＞1时，e<sub>A/B</sub>＞1则α＞0，此时两种兵种混合以后比单一兵种更好；e<sub>A/B</sub>＜1则α＜0，此时两种兵种混合以后反而不如单一兵种。
