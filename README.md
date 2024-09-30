@@ -16,7 +16,7 @@
 
 **每场战斗分为四个阶段：调动阶段、战斗阶段前期、战斗阶段后期和追击阶段**。
 
-- [![Maneuver phase.png](https://ck3.parawikis.com/images_ck3wiki/e/e2/Maneuver_phase.png)](https://ck3.parawikis.com/wiki/File:Maneuver_phase.png) **调动阶段**：机动阶段发生在战斗开始时，持续三天，在此期间**双方均不造成伤亡**。调动阶段结束后会决定此次战斗的战场宽度，将领则会投掷出最初的[优势骰](#优势)（基础为0到10的随机数）。
+- [![Maneuver phase.png](https://ck3.parawikis.com/images_ck3wiki/e/e2/Maneuver_phase.png)](https://ck3.parawikis.com/wiki/File:Maneuver_phase.png) **调动阶段**：机动阶段发生在战斗开始时，持续三天，在此期间**双方均不造成伤亡**。调动阶段结束后会决定此次战斗的战场宽度（注：最小战场宽度为100），将领则会投掷出最初的[优势骰](#优势)（基础为0到10的随机数）。
 - [![Early battle phase.png](https://ck3.parawikis.com/images_ck3wiki/6/6e/Early_battle_phase.png)](https://ck3.parawikis.com/wiki/File:Early_battle_phase.png) **战斗阶段前期**：战斗阶段前期持续12天。这个阶段不能主动撤退，如果一支军队在战斗阶段前期被击败，这支军队将被全歼。两个战斗阶段中的大多数伤亡都被视为溃逃（基础战死比例为30%），并将在追击阶段返回军队。
 - [![Late battle phase.png](https://ck3.parawikis.com/images_ck3wiki/e/e6/Late_battle_phase.png)](https://ck3.parawikis.com/wiki/File:Late_battle_phase.png) **战斗阶段后期**：战斗的第15天开始进入战斗阶段后期，**持续到一支军队军力归零或决定撤退为止**。在战斗后期阶段结束之前的任何时刻，你都可以通过右键单击目的地**来命令你的部队撤退**。这样做会立即开始追击阶段，你的对手将成为追击者，在必输的战斗中主动撤退可减少伤亡。战斗阶段前期和后期，除了是否能主动撤退以及战败的严厉惩罚以外，没有其他区别。
   - **战斗阶段的伤害计算**，每轮执行以下操作【一天为一轮】：
@@ -24,13 +24,85 @@
     2. 将全部的部队伤害累加，计算出总伤害。
     3. 根据敌方部队的军力占比分配总伤害【比如若敌方部队当前剩下99军力的征召兵和1军力的骑士，骑士只会受到1%总伤害】。
     4. 每个部队所受伤害除以对应部队的坚韧，来计算每个部队的军力损失。
-    5. 计算战死和溃逃（基础战死率为 30%）。
+    5. 计算战死（硬损失）和溃逃（软损失）【基础战死率为 30%】。
     6. 对于击杀结算，根据部队造成的伤害分割总击杀数（如果部队造成总伤害的 50%，则它将获得 50% 的击杀数）。
-
 - [![Aftermath phase.png](https://ck3.parawikis.com/images_ck3wiki/8/88/Aftermath_phase.png)](https://ck3.parawikis.com/wiki/File:Aftermath_phase.png) **追击阶段**：追击阶段持续3天，获胜的军队试图追杀另一方的「溃逃士兵」，让其成为「战死士兵」。
   - 获胜的军队将对溃逃的军队持续造成伤害，并且不会受到任何伤害，在此阶段的伤亡被视为战死。
-  - **追击阶段时，军队的伤害属性不再生效，取而代之的是追击属性**。战败的军队在撤退过程中会共计承受5%剩余总军力的被动损失（战斗日志里记为“撤退时掉队”）。撤退中掉队的部队会计算为追击中的击杀，且按照一定规则分配给追击部队，导致追击为0的部队看起来在追击阶段也有一定击杀。
+  - **追击阶段时，军队的伤害属性不再生效，取而代之的是追击属性（优势加成不影响追击阶段）**。战败的军队在撤退过程中会共计承受5%剩余总军力的被动损失（战斗日志里记为“撤退时掉队”）。撤退中掉队的部队会计算为追击中的击杀，且按照一定规则分配给追击部队，导致追击为0的部队看起来在追击阶段也有一定击杀。
   - 当阶段结束时，被击败的军队将随同所有幸存的「溃逃士兵」转移到相邻的男爵领中，军队将会溃逃过几个男爵领后，才能再次接受命令，溃逃时部队移动速度将比受控军队快一些。
+
+游戏文件来源（2024/9/28的版本）：game\common\defines\00_defines.txt
+
+```
+NCombat = {
+	UNRAISED_LEVY_REGIMENTS_SPEED = 40.0			# 未集结的征召兵每天移动的距离单位（40），应该是影响集结速度。
+	COMBAT_ROLL_DAYS = 3							# 每3天骰一次优势骰子。
+	COMBAT_EVENT_DAYS = 5							# 骑士事件发生的间隔天数（5天）。
+
+	DEVIATION_FALLOFF = 0.1							# 如果平均值被限制在 ACTION_LEVELS，则标准差会使用此因子减少（值越高，减少越快）标准差表示数据的分散程度或随机性。如果标准差减少，意味着数据（如战斗结果、骰子掷出的值等）会更加集中，随机性会减少。
+	WAR_ATTACKER_COMBAT_SCORE_SCALE = 50			# 战争发起方获得战争分数的比例因子。可以被 CB 的设定覆盖
+	WAR_DEFENDER_COMBAT_SCORE_SCALE = 50			# 战争防御方获得战争分数的比例因子。可以被 CB 的设定覆盖
+	WAR_ATTACKER_COMBAT_MAX_SCORE = 50				# 战争发起方在单次战斗获得的最大战争分数
+	WAR_DEFENDER_COMBAT_MAX_SCORE = 50				# 战争防御方在单次战斗获得的最大战争分数
+	MANEUVER_PHASE_DAYS = 3							# 调动阶段持续时间
+	LEVY_TOUGHNESS = 10								# 征召兵的坚韧
+	LEVY_ATTACK = 10								# 征召兵的伤害
+	LEVY_SIEGE = 0									# 征召兵的围城
+	LEVY_PURSUIT = 0								# 征召兵的追击
+	LEVY_SCREEN = 0									# 征召兵的掩护
+	DAMAGE_SCALING_FACTOR = 0.03					# 伤害因子
+	BASE_RATIO_CASUALTIES_CONVERSION = 0.3			# 在战斗阶段，有多少软伤亡（可恢复的伤亡）应该转化为硬伤亡（不可恢复的伤亡）【即基础战死率为30%】
+	PURSUIT_PHASE_DAYS = 3							# 追击阶段持续时间
+	ADVANTAGE_DAMAGE_SCALING_FACTOR = 10				# 优势差距转换为伤害的倍率（10表示1优势差增加10%伤害）
+	BASE_WIDTH_RATIO = 1							# 战场宽度的基础比例（1就是100%，等于双方军力总和除以2）
+	COMMANDER_MIN_ROLL = 0            # 指挥官的优势骰子的最小值
+	COMMANDER_MAX_ROLL = 10						# 指挥官的优势骰子的最大值
+	MEN_AT_ARMS_MAX_COUNTER = 0.9					# 被克制以后，兵士伤害下降的最大值（完全反制：减少90%伤害---只造成10%伤害）
+	RATIO_FOR_MAX_COUNTER = 2.0						# Ratio for Max Counter 值是 2.0，那么两倍克制因子就才可以完全反制一个敌军军团。
+	MEN_AT_ARMS_COUNTER_MODIFICATION = 6			# 当MAA类型的单位被反制时，他们的所有战斗掷骰子（rolls）结果都会受到一个 6 点的修正。【总之被克制除了伤害降低，还有骰子降低】（原文：A countered men at arms base type get this modification to all of their rolls）
+	MIN_DAYS_BEFORE_MANUAL_RETREAT = 14				# 可以撤退之前的最小天数（就是第15天可以撤退）
+
+	MINIMUM_COMBAT_WIDTH = 100						# 最小战场宽度
+	BASE_RATIO_CASUALTIES_CONVERSION_PURSUIT = 1	# 追击阶段时的战死比例，1代表追击阶段的伤亡全都是战死。
+	PURSUIT_STAT_TO_PURSUIT_DAMAGE = 0.5			# 追击阶段，“追击” 转换为 "实际伤害" 的倍率（平分在整个追击阶段）
+	BASE_TOUGHNESS_TO_PURSUIT = 0.05				# 撤退方5%的韧性（溃逃部分，即追击阶段开始时剩余部队的总韧性）将转化为追击方造成的"实际伤害" （在全程追击期间，而不是每天）。本质上，这意味着如果双方都没有掩护或追击，撤退方将战死5%。如果追击方的追击比防御方的掩护多，则更多，反之亦然。【应该是追击阶段开始时的韧性】
+	MINIMUM_PURSUIT_DAMAGE = 0.01					# 掩护值（Screen）对减少伤亡的影响有一个最低限制，即使掩护值非常高，也无法将撤退时的战死比例降低到1%以下。
+	DISEMBARK_PENALTY_DAYS = 30						# 军队从船上登陆后的惩罚持续时间（30天）。
+	KNIGHT_DAMAGE_PER_PROWESS = 100					# 每点骑士的勇武（Prowess）对应的伤害增幅。
+	KNIGHT_TOUGHNESS_PER_PROWESS = 10				# 每点骑士的勇武（Prowess）对应的韧性增幅。
+
+	### Brief: KNIGHT_AVERAGE_PROWESS_FOR_AI_POWER_CALCULATION ( int32 )
+	# How much prowess do we assume a knight to have for the purpose
+	# of simple base power calculations. Base power is what the AI uses
+	# to estimate a ruler's military might, where Power is the sum of
+	# a Regiment's Power and Toughness, in case of knights
+	# KNIGHT_DAMAGE_PER_PROWESS and KNIGHT_TOUGHNESS_PER_PROWESS,
+	# multiplied by the number of troops.
+	#
+	# With game defaults this means an AI will evaluate a ruler's
+	# knight's military power at 1100 per knight.
+	#
+	KNIGHT_AVERAGE_PROWESS_FOR_AI_POWER_CALCULATION = 10 #AI在估算战力时，将勇士的平均勇武当成10
+	COMBAT_RESULT_MONTHS_TO_TIMEOUT = 12			# 12个月以后战斗超时
+}
+
+AI估算战力机制介绍：
+AI预估战力 = Σ（部队的伤害+部队的坚韧）×部队的数量，不考虑任何加成，【每个部队单独计算然后求和，在这个计算中，一个骑士等于1100战力，一个征召兵等于20战力】
+
+.
+将伤害因子改成0.2，优势倍率改成6，将领骰子改成0 ~ 12，可以大幅度减少歼灭战（stackwiped；2倍标准战力歼灭~相同部队4倍伤害），让战斗随机数略微降低
+scope:wipe = yes
+```
+
+## 军队类型
+
+受雇军队：包括骑士团和佣兵团。受雇军队里的兵士和征召兵，不吃任何有关兵士或者征召兵的加成
+
+特殊雇佣兵：因为是独立势力，所以跟AI的领主军队一样受到加成。
+
+事件军队：事件军队里的兵士和征召兵，受到所有者的有关兵士和征召兵的加成
+
+领主军队：包括头衔兵士、一般兵士、骑士和征召兵
 
 
 ## 军队
